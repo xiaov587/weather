@@ -143,7 +143,7 @@ public class WeatherDB {
                 country.setCountryCode(cursor.getString(cursor.getColumnIndex("country_code")));
                 country.setCityId(cityId);
                 list.add(country);
-            }
+            }while(cursor.moveToNext());
         }
         return list;
     }
